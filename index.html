@@ -25,19 +25,12 @@
             <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
             <meta name="viewport" content="width=device-width, height=device-height, user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, target-densitydpi=device-dpi" />
         
-        <link rel="stylesheet" type="text/css" href="css/cityrise.min.css">
+        <link rel="stylesheet" type="text/css" href="css/cityrise.css">
         <link rel="stylesheet" type="text/css" href="css/jquery.mobile.icons.min.css">
         <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
         
-        <title>Hello World</title>
+        <title>CİTYRİSE APPS</title>
 
-        <style>
-                #map {
-                   height: 800px;
-                   width: 100%;
-                  }
-              
-                </style>
     </head>
     <body>
 
@@ -50,12 +43,13 @@
                         <input type="search" name="search-2" id="search-2" value="" />
                     
                     </div>
-                    <div data-role="content" data-theme="a" id="map">
-                
+                    <div data-role="content"  data-theme="a" id="map">
+                       
+                         
                     </div>
             
                     <div data-role="footer" data-theme="a"  data-position="fixed"  data-fullscreen="true"  >
-                        <div data-role="navbar"  data-position="fixed">
+                        <div data-role="navbar"  >
                             <ul>
                                 <li ><a href="#menu" data-icon="grid" >Menu</a></li>
                                 <li><a href="index.html" data-icon="location">Map</a></li>
@@ -65,16 +59,58 @@
                         </div>
                     </div>
                 </div>
+           
             
-            
-                <div data-role="page" data-theme="a" id="menu">
+                <div data-role="page" data-theme="a" class="ui-back" id="menu">
                     <div data-role="header"  data-position="fixed">
                         
                         <h1> RiseMaps</h1>
                     
                     </div>
-                    <div data-role="content" data-theme="a">
-                
+
+                    <div data-role="main "  data-theme="a">
+              
+                    <ul data-role="listview" data-inset="true">
+        	<li><a href="#">
+            	<img src="img/listimg/food.png" class="ui-li-thumb">
+            	<h2>Restaurants</h2>
+                <p>Restaurants,streed foods.etc</p>
+           
+            </a></li>
+        	<li><a href="#">
+            	<img src="img/listimg/health.png" class="ui-li-thumb">
+            	<h2>Hospital</h2>
+                <p>Hospitals,clinics.etc</p>
+               
+            </a></li>
+        	<li><a href="#">
+            	<img src="img/listimg/hotel.png" class="ui-li-thumb">
+            	<h2>Hotels</h2>
+                <p>Hotels,Campgrounds,Motels</p>
+               
+            </a></li>
+        	<li><a href="#">
+            	<img src="img/listimg/taxi.png" class="ui-li-thumb">
+            	<h2>Taxi</h2>
+                <p>Taxi,Bus stations</p>
+             
+            </a></li>
+        	<li><a href="#">
+            	<img src="img/listimg/market_stand.png"  class="ui-li-thumb">
+            	<h2>Markets</h2>
+                <p>Avm,Market places,bazaars</p>
+               
+            </a></li>
+        	<li><a href="#">
+            	<img src="img/listimg/cinema.png" class="ui-li-thumb">
+            	<h2>Cinema</h2>
+                <p>Cinemas,amusement parks,	Bars,public houses</p>
+               
+            </a></li>
+        	
+        </ul>
+
+                                       
                     </div>
             
                     <div data-role="footer" data-theme="a"  data-position="fixed"  data-fullscreen="true" >
@@ -99,9 +135,35 @@
                         <h1> RiseMaps</h1>
                     
                     </div>
-                    <div data-role="content" data-theme="a">
- 
+                    <div data-role="content" data-theme="b" >
+                     <h2 >Visual Settings</h2>
+                     <label>Theme Settings</label>
+                     <select>
+        
+                        <option value="volvo">Theme1</option>
+                        <option value="saab">Theme2</option>
+                        <option value="mercedes">Theme3</option>
+                     
+                      </select>
+                      <label>Map Visual Settings </label>
+                      <select>
+         
+                         <option value="volvo">map1</option>
+                         <option value="saab">map2</option>
+                         <option value="mercedes">map3</option>
+                      
+                       </select>
+                       <label>Marker Color </label>
+                       <select>
+          
+                          <option value="volvo">Marker1</option>
+                          <option value="saab">Marker2</option>
+                          <option value="mercedes">Marker3</option>
+                       
+                        </select>
                     </div>
+
+                    
             
                     <div data-role="footer" data-theme="a"  data-position="fixed"  data-fullscreen="true" >
                         <div data-role="navbar"  data-position="fixed">
@@ -123,7 +185,7 @@
                         <h1> RiseMaps</h1>
                     
                     </div>
-                    <div data-role="content" data-theme="a">
+                    <div data-role="main" data-theme="a">
                         <label>Latitude</label>
                 <input type="text" id="lat">
                  <label>Longitude</label>
@@ -159,22 +221,17 @@
 
 
                 <script>
+                        var map;
                         function initMap() {
-                          var uluru = {lat: -25.363, lng: 131.044};
-                          var map = new google.maps.Map(document.getElementById('map'), {
-                            zoom: 4,
-                            center: uluru
-                          });
-                          var marker = new google.maps.Marker({
-                            position: uluru,
-                            map: map
+                          map = new google.maps.Map(document.getElementById('map'), {
+                            center: {lat: -34.397, lng: 150.644},
+                            zoom: 8
                           });
                         }
                       </script>
-                      <script async defer
-                      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVl6p_kI7KIF4qS9h9H6a3F3XE4CrOLgc&callback=initMap">
-                      </script>
-                
+                      <script src="https://maps.googleapis.com/maps/api/js?key=Your api key&callback=initMap"
+                      async defer></script>
+          
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
         <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
