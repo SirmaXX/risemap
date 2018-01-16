@@ -34,6 +34,7 @@
     </head>
     <body>
 
+<!--   map page -->
             <div data-role="page" data-theme="a" >
                     <div data-role="header"  data-position="fixed" id="#mapp"  data-fullscreen="true" >
                         
@@ -129,6 +130,7 @@
 
 
 
+<!--   setting page -->
                 <div data-role="page" data-theme="a" id="setting">
                     <div data-role="header"  data-position="fixed"  data-fullscreen="true" >
                         
@@ -178,7 +180,7 @@
                 </div>
 
 
-
+<!--   geoloc page -->
                 <div data-role="page" class="app" data-theme="a" id="geoloc">
                     <div data-role="header"  data-position="fixed"  data-fullscreen="true" >
                         
@@ -219,19 +221,34 @@
                 </div>
 
 
+<!--   error page -->
+                <div data-role="page" data-theme="a"  class="ui-back" id="error">
+                    <div data-role="header"  data-position="fixed"  data-fullscreen="true" >
+                        
+                        <h1> RiseMaps</h1>
+                    
+                    </div>
+                    <div data-role="content" data-theme="a" >
+      <center>
+         
 
-                <script>
-                        var map;
-                        function initMap() {
-                          map = new google.maps.Map(document.getElementById('map'), {
-                            center: {lat: -34.397, lng: 150.644},
-                            zoom: 8
-                          });
-                        }
-                      </script>
-                      <script src="https://maps.googleapis.com/maps/api/js?key=Your api key&callback=initMap"
+                   <img src="img/FreeVector-Satellite.png" class="img-free ui-back" >
+
+                   <h2 > NO GPS SİGNAL</h2> 
+                </center>
+                    </div>
+
+                    
+            
+                </div>
+
+
+<!--   error page -->
+
+    
+                      <script src="https://maps.googleapis.com/maps/api/js?key=Yourapikey&callback=initMap"
                       async defer></script>
-          
+                
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
         <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>

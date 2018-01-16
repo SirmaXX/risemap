@@ -15,7 +15,11 @@
 -----------------------------------------------------------------------------------------------------------*/
 html {
 	font-size: 100%;
-
+	background-image:url('../img/curious.jpg');
+	background-repeat:repeat-y;
+    background-position:center center;
+    background-attachment:scroll;
+    background-size:100% 100%;
 }
 body,
 input,
@@ -252,7 +256,11 @@ html .ui-bar-a .ui-body-inherit,
 html .ui-body-a .ui-body-inherit,
 html body .ui-group-theme-a .ui-body-inherit,
 html .ui-panel-page-container-a {
-	background-color: #ffffff /*{a-body-background-color}*/;
+	background-image:url('../img/curious.jpg');
+	background-repeat:repeat-y;
+    background-position:center center;
+    background-attachment:scroll;
+    background-size:100% 100%;
 	border-color: #dddddd /*{a-body-border}*/;
 	color: #333333 /*{a-body-color}*/;
 	text-shadow: 0 /*{a-body-shadow-x}*/ 1px /*{a-body-shadow-y}*/ 0 /*{a-body-shadow-radius}*/ #f3f3f3 /*{a-body-shadow-color}*/;
@@ -756,8 +764,16 @@ button[disabled],
 }	
    /* Always set the map height explicitly to define the size of the div
        * element that contains the map. */
-	   #map {
+ #map {
 		height:800px;
 		width:100%;
-      }
+ }
+
+ .img-free{
+
+	width:100%;
+
+ }
+	  
+
    
