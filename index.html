@@ -39,9 +39,54 @@
                     <div data-role="header"  data-position="fixed" id="#mapp"  data-fullscreen="true" >
                         
                         <h1> RiseMaps</h1>
-            
-                    
-                        <input type="search" name="search-2" id="search-2" value="" />
+        
+
+
+                        <ul data-role="listview" data-inset="true" data-shadow="false">
+                              <li data-role="collapsible" data-iconpos="right" data-inset="false">
+                                <h2>Journey Setting</h2>
+                                <ul data-role="listview" data-theme="b">
+                               
+                                  <li><input id="end" class="controls" type="text"
+                                placeholder="Enter a destination location">
+                                  <li>
+
+
+                                  <li data-role="collapsible" data-iconpos="right" data-inset="false">
+                                        <h2>Choose your Vehicles</h2>
+                                     
+                                                   <div id="mode-selector" class="controls">
+                                            <input type="radio" name="type" id="changemode-walking" checked="checked">
+                                            <label for="changemode-walking">Walking</label>
+                                      
+                                            <input type="radio" name="type" id="changemode-transit">
+                                            <label for="changemode-transit">Transit</label>
+                                      
+                                            <input type="radio" name="type" id="changemode-driving">
+                                            <label for="changemode-driving">Driving</label>
+                                          </div>
+                                          
+                                     
+                                      
+
+
+                            </li>
+
+                            </li>
+
+
+                              
+                                </ul>
+                            
+                              </li>
+                       
+                             
+                            
+                            </ul>
+
+                       
+                
+               
                     
                     </div>
                     <div data-role="content"  data-theme="a" id="map">
@@ -205,7 +250,7 @@
                 <label>Timestamp</label>
                 <input type="text" id="tmsp">
 
-                <button onclick="geolocc();">Bilgileri getir</button>
+                <button onclick="getir();">Bilgileri getir</button>
                     </div>
             
                     <div data-role="footer" data-theme="a"  data-position="fixed"  data-fullscreen="true" >
@@ -219,6 +264,7 @@
                         </div>
                     </div>
                 </div>
+
 
 
 <!--   error page -->
@@ -245,9 +291,8 @@
 
 <!--   error page -->
 
-    
-                      <script src="https://maps.googleapis.com/maps/api/js?key=Yourapikey&callback=initMap"
-                      async defer></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=Your api key in here&callback=initMap"
+async defer></script>
                 
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
