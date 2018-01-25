@@ -1,6 +1,6 @@
 # risemap
 opensource map application  
-(jquery mobile+cordova)
+(framework7+cordova)
 
 geolocation plugin
 https://github.com/apache/cordova-plugin-geolocation
